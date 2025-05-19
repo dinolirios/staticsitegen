@@ -16,6 +16,5 @@ class TestLeafNode(unittest.TestCase):
         with self.assertRaises(ValueError):
             node.to_html()
 
-# This allows the tests to be run from the command line
 if __name__ == "__main__":
     unittest.main()

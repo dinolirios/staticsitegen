@@ -30,11 +30,11 @@ class TestTextNode(unittest.TestCase):
         self.assertEqual(node1, node2)
 
     def test_default_url_is_none(self):
-        node = TextNode("Plain", TextType.NORMAL)
+        node = TextNode("Plain", TextType.TEXT)
         self.assertIsNone(node.url)
 
     def test_text(self):
-        node = TextNode("This is a text node", TextType.NORMAL)
+        node = TextNode("This is a text node", TextType.TEXT)
         html_node = text_node_to_html_node(node)
         self.assertEqual(html_node.tag, None)
         self.assertEqual(html_node.value, "This is a text node")
@@ -45,6 +45,6 @@ class TestTextNode(unittest.TestCase):
         self.assertEqual(html_node.tag, 'img')
         self.assertEqual(html_node.value, "")
         self.assertEqual(html_node.props, {"src": "facebook.com", "alt": "This is an image"})
-        
+
 if __name__ == "__main__":
     unittest.main()

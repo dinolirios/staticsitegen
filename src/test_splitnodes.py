@@ -2,6 +2,8 @@ import unittest
 
 from textnode import TextNode, TextType
 
+from splitnodes_delimiter import *
+
 class TestSplitNodesDelimiter(unittest.TestCase):
     def test_split_one_delimiter(self):
         """

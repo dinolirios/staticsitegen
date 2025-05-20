@@ -14,8 +14,8 @@ def split_nodes_delimiter(old_nodes, delimiter, text_type):
         if len(split_text) % 2 == 0:
             raise ValueError("Invalid markdown syntaxtx: even number of delimiters")
         
-        for i in range(len(parts)):
-            part = parts[i]
+        for i in range(len(split_text)):
+            part = split_text[i]
             if i % 2 == 0:
                 if part != "":
                     new_nodes.append(TextNode(part, TextType.TEXT))
